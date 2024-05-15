@@ -1,0 +1,7 @@
+networks:
+  common-net:
+    external: true
+
+volumes:
+  common-mysql:
+  common-redis:
