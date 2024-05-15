@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  redis:
+    image: 'bitnami/redis:${REDIS_IMAGE_TAG}'
+    container_name: 'redis-6-container'
+    restart: unless-stopped
+    volumes:
+      - common-redis:/bitnami
+
+    env_file:
+      - .envs/redis.env
+
+    networks:
+      common-net:
+        aliases:
+          - common-redis
+    ports:
+      - ${REDIS_PUBLISH_PORT}:6379
