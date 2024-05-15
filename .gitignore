@@ -2,9 +2,3 @@
 /nbproject
 /.vscode
 .env
-# Ignore all yml files except hm.yml
-*.yml
-!docker-compose.yml
-
-# Allow example.yml files to be tracked
-!example*.yml
